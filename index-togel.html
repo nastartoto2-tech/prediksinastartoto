@@ -53,6 +53,34 @@ footer{text-align:center;color:#d8c5b4;font-size:11px;margin-top:30px}
   transition:max-height .42s cubic-bezier(.22,.7,.25,1),opacity .28s ease,
     padding .35s ease,margin .35s ease,border-color .25s ease,visibility 0s linear .42s;
 }
+
+  
+.market-schedule {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px 18px;
+  margin: 12px 0 16px;
+  padding: 11px 14px;
+  border: 1px solid rgba(255,255,255,.14);
+  border-radius: 12px;
+  background: rgba(255,255,255,.06);
+  color: inherit;
+  font-size: 12px;
+  text-align: center;
+}
+
+.market-schedule b {
+  color: #f6d99c;
+  font-weight: 800;
+}
+
+.market-schedule-column {
+  flex-direction: column;
+  align-items: center;
+  gap: 7px;
+}
+
 .prediction-detail.is-open{
   max-height:560px;opacity:1;visibility:visible;margin:0 12px 12px 66px;
   padding:17px;border-color:rgba(229,185,79,.5);
@@ -209,137 +237,165 @@ to{opacity:1;transform:translateY(0)}}
         <span>Nama Pasaran</span>
       </div>
 
-      <!-- 1. SYDNEY -->
-      <div class="market-entry">
-        <button class="market-row market-trigger" type="button" data-market="SYDNEY" aria-expanded="false">
-          <span class="market-no">1</span>
-          <span class="market-name">SYDNEY <span class="market-chevron">＋</span></span>
-        </button>
-        <section class="prediction-detail" id="prediction-SYDNEY" aria-live="polite">
-          <h3 class="prediction-title">PREDIKSI SYDNEY POOLS</h3>
-          <p class="prediction-date">09 NOVEMBER 2026</p>
-          <div class="prediction-lines">
-            <div class="prediction-line"><b>ANGKA MAIN</b>9 5 7 0</div>
-            <div class="prediction-line"><b>COLOK BEBAS</b>9 / 0</div>
-            <div class="prediction-line"><b>ANGKA PANAS</b>12 80 33</div>
-            <div class="prediction-line"><b>SHIO</b>KELINCI</div>
-            <div class="prediction-line top2d">
-              <b>TOP 2D</b>
-              <span>19 99 39 49<br>12 22 32 42<br>18 88 98 68<br>13 23 83 48</span>
-            </div>
-          </div>
-        </section>
+      
+<!-- 1. SYDNEY -->
+<div class="market-entry">
+  <button class="market-row market-trigger" type="button" data-market="SYDNEY" aria-expanded="false">
+    <span class="market-no">1</span>
+    <span class="market-name">SYDNEY <span class="market-chevron">＋</span></span>
+  </button>
+  <section class="prediction-detail" id="prediction-SYDNEY" aria-live="polite">
+    <h3 class="prediction-title">PREDIKSI SYDNEY POOLS</h3>
+    <p class="prediction-date">09 NOVEMBER 2026</p>
+    <div class="market-schedule">
+      <span>TUTUP : <b>13:00</b></span>
+      <span>RESULT : <b>14:00</b></span>
+    </div>
+    <div class="prediction-lines">
+      <div class="prediction-line"><b>ANGKA MAIN</b>9 5 7 0</div>
+      <div class="prediction-line"><b>COLOK BEBAS</b>9 / 0</div>
+      <div class="prediction-line"><b>ANGKA PANAS</b>12 80 33</div>
+      <div class="prediction-line"><b>SHIO</b>KELINCI</div>
+      <div class="prediction-line top2d">
+        <b>TOP 2D</b>
+        <span>19 99 39 49<br>12 22 32 42<br>18 88 98 68<br>13 23 83 48</span>
       </div>
+    </div>
+  </section>
+</div>
 
-      <!-- 2. SINGAPORE -->
-      <div class="market-entry">
-        <button class="market-row market-trigger" type="button" data-market="SINGAPORE" aria-expanded="false">
-          <span class="market-no">2</span>
-          <span class="market-name">SINGAPORE <span class="market-chevron">＋</span></span>
-        </button>
-        <section class="prediction-detail" id="prediction-SINGAPORE" aria-live="polite">
-          <h3 class="prediction-title">PREDIKSI SINGAPORE</h3>
-          <p class="prediction-date">09 NOVEMBER 2026</p>
-          <div class="prediction-lines">
-            <div class="prediction-line"><b>ANGKA MAIN</b>3 8 1 6</div>
-            <div class="prediction-line"><b>COLOK BEBAS</b>3 / 8</div>
-            <div class="prediction-line"><b>ANGKA PANAS</b>27 64 91</div>
-            <div class="prediction-line"><b>SHIO</b>NAGA</div>
-            <div class="prediction-line top2d">
-              <b>TOP 2D</b>
-              <span>38 18 68 83<br>31 81 61 13<br>36 86 16 63<br>39 89 19 93</span>
-            </div>
-          </div>
-        </section>
+<!-- 2. SINGAPORE -->
+<div class="market-entry">
+  <button class="market-row market-trigger" type="button" data-market="SINGAPORE" aria-expanded="false">
+    <span class="market-no">2</span>
+    <span class="market-name">SINGAPORE <span class="market-chevron">＋</span></span>
+  </button>
+  <section class="prediction-detail" id="prediction-SINGAPORE" aria-live="polite">
+    <h3 class="prediction-title">PREDIKSI SINGAPORE</h3>
+    <p class="prediction-date">09 NOVEMBER 2026</p>
+    <div class="market-schedule">
+      <span>TUTUP : <b>17:25</b></span>
+      <span>RESULT : <b>17:45</b></span>
+    </div>
+    <div class="prediction-lines">
+      <div class="prediction-line"><b>ANGKA MAIN</b>3 8 1 6</div>
+      <div class="prediction-line"><b>COLOK BEBAS</b>3 / 8</div>
+      <div class="prediction-line"><b>ANGKA PANAS</b>27 64 91</div>
+      <div class="prediction-line"><b>SHIO</b>NAGA</div>
+      <div class="prediction-line top2d">
+        <b>TOP 2D</b>
+        <span>38 18 68 83<br>31 81 61 13<br>36 86 16 63<br>39 89 19 93</span>
       </div>
+    </div>
+  </section>
+</div>
 
-      <!-- 3. HONGKONG -->
-      <div class="market-entry">
-        <button class="market-row market-trigger" type="button" data-market="HONGKONG" aria-expanded="false">
-          <span class="market-no">3</span>
-          <span class="market-name">HONGKONG <span class="market-chevron">＋</span></span>
-        </button>
-        <section class="prediction-detail" id="prediction-HONGKONG" aria-live="polite">
-          <h3 class="prediction-title">PREDIKSI HONGKONG</h3>
-          <p class="prediction-date">09 NOVEMBER 2026</p>
-          <div class="prediction-lines">
-            <div class="prediction-line"><b>ANGKA MAIN</b>7 2 9 4</div>
-            <div class="prediction-line"><b>COLOK BEBAS</b>7 / 2</div>
-            <div class="prediction-line"><b>ANGKA PANAS</b>45 72 98</div>
-            <div class="prediction-line"><b>SHIO</b>MACAN</div>
-            <div class="prediction-line top2d">
-              <b>TOP 2D</b>
-              <span>72 92 42 27<br>79 29 49 97<br>74 24 94 47<br>71 21 91 17</span>
-            </div>
-          </div>
-        </section>
+<!-- 3. HONGKONG -->
+<div class="market-entry">
+  <button class="market-row market-trigger" type="button" data-market="HONGKONG" aria-expanded="false">
+    <span class="market-no">3</span>
+    <span class="market-name">HONGKONG <span class="market-chevron">＋</span></span>
+  </button>
+  <section class="prediction-detail" id="prediction-HONGKONG" aria-live="polite">
+    <h3 class="prediction-title">PREDIKSI HONGKONG</h3>
+    <p class="prediction-date">09 NOVEMBER 2026</p>
+    <div class="market-schedule">
+      <span>TUTUP : <b>22:15</b></span>
+      <span>RESULT : <b>23:00</b></span>
+    </div>
+    <div class="prediction-lines">
+      <div class="prediction-line"><b>ANGKA MAIN</b>7 2 9 4</div>
+      <div class="prediction-line"><b>COLOK BEBAS</b>7 / 2</div>
+      <div class="prediction-line"><b>ANGKA PANAS</b>45 72 98</div>
+      <div class="prediction-line"><b>SHIO</b>MACAN</div>
+      <div class="prediction-line top2d">
+        <b>TOP 2D</b>
+        <span>72 92 42 27<br>79 29 49 97<br>74 24 94 47<br>71 21 91 17</span>
       </div>
+    </div>
+  </section>
+</div>
 
-      <!-- 4. TOTO WUHAN -->
-      <div class="market-entry">
-        <button class="market-row market-trigger" type="button" data-market="TOTO WUHAN" aria-expanded="false">
-          <span class="market-no">4</span>
-          <span class="market-name">TOTO WUHAN <span class="market-chevron">＋</span></span>
-        </button>
-        <section class="prediction-detail" id="prediction-TOTO-WUHAN" aria-live="polite">
-          <h3 class="prediction-title">PREDIKSI TOTO WUHAN</h3>
-          <p class="prediction-date">09 NOVEMBER 2026</p>
-          <div class="prediction-lines">
-            <div class="prediction-line"><b>ANGKA MAIN</b>5 0 8 3</div>
-            <div class="prediction-line"><b>COLOK BEBAS</b>5 / 0</div>
-            <div class="prediction-line"><b>ANGKA PANAS</b>16 53 80</div>
-            <div class="prediction-line"><b>SHIO</b>ULAR</div>
-            <div class="prediction-line top2d">
-              <b>TOP 2D</b>
-              <span>50 80 30 05<br>58 08 38 85<br>53 03 83 35<br>51 01 81 15</span>
-            </div>
-          </div>
-        </section>
+<!-- 4. TOTO WUHAN -->
+<div class="market-entry">
+  <button class="market-row market-trigger" type="button" data-market="TOTO WUHAN" aria-expanded="false">
+    <span class="market-no">4</span>
+    <span class="market-name">TOTO WUHAN <span class="market-chevron">＋</span></span>
+  </button>
+  <section class="prediction-detail" id="prediction-TOTO-WUHAN" aria-live="polite">
+    <h3 class="prediction-title">PREDIKSI TOTO WUHAN</h3>
+    <p class="prediction-date">09 NOVEMBER 2026</p>
+    <div class="market-schedule market-schedule-column">
+      <span>TUTUP : <b>TIAP 3 JAM</b></span>
+      <span>RESULT :</span>
+      <b>09:00 | 12:00 | 15:00</b>
+      <b>18:00 | 21:00 | 00:00</b>
+    </div>
+    <div class="prediction-lines">
+      <div class="prediction-line"><b>ANGKA MAIN</b>5 0 8 3</div>
+      <div class="prediction-line"><b>COLOK BEBAS</b>5 / 0</div>
+      <div class="prediction-line"><b>ANGKA PANAS</b>16 53 80</div>
+      <div class="prediction-line"><b>SHIO</b>ULAR</div>
+      <div class="prediction-line top2d">
+        <b>TOP 2D</b>
+        <span>50 80 30 05<br>58 08 38 85<br>53 03 83 35<br>51 01 81 15</span>
       </div>
+    </div>
+  </section>
+</div>
 
-      <!-- 5. HK SIANG -->
-      <div class="market-entry">
-        <button class="market-row market-trigger" type="button" data-market="HK SIANG" aria-expanded="false">
-          <span class="market-no">5</span>
-          <span class="market-name">HK SIANG <span class="market-chevron">＋</span></span>
-        </button>
-        <section class="prediction-detail" id="prediction-HK-SIANG" aria-live="polite">
-          <h3 class="prediction-title">PREDIKSI HK SIANG</h3>
-          <p class="prediction-date">09 NOVEMBER 2026</p>
-          <div class="prediction-lines">
-            <div class="prediction-line"><b>ANGKA MAIN</b>6 1 4 9</div>
-            <div class="prediction-line"><b>COLOK BEBAS</b>6 / 9</div>
-            <div class="prediction-line"><b>ANGKA PANAS</b>34 69 14</div>
-            <div class="prediction-line"><b>SHIO</b>KUDA</div>
-            <div class="prediction-line top2d">
-              <b>TOP 2D</b>
-              <span>61 41 91 16<br>64 14 94 46<br>69 19 49 96<br>62 12 92 26</span>
-            </div>
-          </div>
-        </section>
+<!-- 5. HK SIANG -->
+<div class="market-entry">
+  <button class="market-row market-trigger" type="button" data-market="HK SIANG" aria-expanded="false">
+    <span class="market-no">5</span>
+    <span class="market-name">HK SIANG <span class="market-chevron">＋</span></span>
+  </button>
+  <section class="prediction-detail" id="prediction-HK-SIANG" aria-live="polite">
+    <h3 class="prediction-title">PREDIKSI HK SIANG</h3>
+    <p class="prediction-date">09 NOVEMBER 2026</p>
+    <div class="market-schedule">
+      <span>TUTUP : <b>10:30</b></span>
+      <span>RESULT : <b>11:00</b></span>
+    </div>
+    <div class="prediction-lines">
+      <div class="prediction-line"><b>ANGKA MAIN</b>6 1 4 9</div>
+      <div class="prediction-line"><b>COLOK BEBAS</b>6 / 9</div>
+      <div class="prediction-line"><b>ANGKA PANAS</b>34 69 14</div>
+      <div class="prediction-line"><b>SHIO</b>KUDA</div>
+      <div class="prediction-line top2d">
+        <b>TOP 2D</b>
+        <span>61 41 91 16<br>64 14 94 46<br>69 19 49 96<br>62 12 92 26</span>
       </div>
+    </div>
+  </section>
+</div>
 
-      <!-- 6. MALAYSIA -->
-      <div class="market-entry">
-        <button class="market-row market-trigger" type="button" data-market="MALAYSIA" aria-expanded="false">
-          <span class="market-no">6</span>
-          <span class="market-name">MALAYSIA <span class="market-chevron">＋</span></span>
-        </button>
-        <section class="prediction-detail" id="prediction-MALAYSIA" aria-live="polite">
-          <h3 class="prediction-title">PREDIKSI MALAYSIA</h3>
-          <p class="prediction-date">09 NOVEMBER 2026</p>
-          <div class="prediction-lines">
-            <div class="prediction-line"><b>ANGKA MAIN</b>2 7 5 0</div>
-            <div class="prediction-line"><b>COLOK BEBAS</b>2 / 5</div>
-            <div class="prediction-line"><b>ANGKA PANAS</b>20 57 82</div>
-            <div class="prediction-line"><b>SHIO</b>AYAM</div>
-            <div class="prediction-line top2d">
-              <b>TOP 2D</b>
-              <span>27 57 07 72<br>25 75 05 52<br>20 70 50 02<br>29 79 59 92</span>
-            </div>
-          </div>
-        </section>
+<!-- 6. MALAYSIA -->
+<div class="market-entry">
+  <button class="market-row market-trigger" type="button" data-market="MALAYSIA" aria-expanded="false">
+    <span class="market-no">6</span>
+    <span class="market-name">MALAYSIA <span class="market-chevron">＋</span></span>
+  </button>
+  <section class="prediction-detail" id="prediction-MALAYSIA" aria-live="polite">
+    <h3 class="prediction-title">PREDIKSI MALAYSIA</h3>
+    <p class="prediction-date">09 NOVEMBER 2026</p>
+    <div class="market-schedule">
+      <span>TUTUP : <b>18:30</b></span>
+      <span>RESULT : <b>19:00</b></span>
+    </div>
+    <div class="prediction-lines">
+      <div class="prediction-line"><b>ANGKA MAIN</b>2 7 5 0</div>
+      <div class="prediction-line"><b>COLOK BEBAS</b>2 / 5</div>
+      <div class="prediction-line"><b>ANGKA PANAS</b>20 57 82</div>
+      <div class="prediction-line"><b>SHIO</b>AYAM</div>
+      <div class="prediction-line top2d">
+        <b>TOP 2D</b>
+        <span>27 57 07 72<br>25 75 05 52<br>20 70 50 02<br>29 79 59 92</span>
       </div>
+    </div>
+  </section>
+</div>
+
       <br><br><br>
     </div>
   </div>
