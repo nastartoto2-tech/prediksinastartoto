@@ -85,19 +85,106 @@ to{opacity:1;transform:translateY(0)}}
 </head>
 <body>
 
-<style id="site-nav-css">
-.site-nav{position:sticky;top:10px;z-index:9999;display:flex;justify-content:center;gap:7px;
-width:max-content;max-width:calc(100% - 24px);margin:12px auto 18px;padding:6px;
-border:1px solid rgba(255,255,255,.22);border-radius:18px;
-background:rgba(35,20,36,.78);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);
-box-shadow:0 8px 28px rgba(0,0,0,.18)}
-.site-nav a{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;
-padding:10px 16px;border-radius:12px;color:inherit;font:700 12px/1.2 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
-white-space:nowrap;transition:background .2s ease,transform .2s ease}
-.site-nav a:hover{background:rgba(255,255,255,.13);transform:translateY(-1px)}
-.site-nav a[aria-current="page"]{background:rgba(255,255,255,.18);color:#f6d99c}
-@media(max-width:520px){.site-nav{width:calc(100% - 24px);box-sizing:border-box}.site-nav a{flex:1;padding:10px 8px}}
+<style>
+.site-nav {
+  position: fixed;
+  z-index: 9999;
+  bottom: 16px;
+  left: 50%;
+  transform: translate(-50%, 150%);
+  opacity: 0;
+  pointer-events: none;
+
+  display: flex;
+  justify-content: center;
+  gap: 7px;
+  width: max-content;
+  max-width: calc(100% - 24px);
+  padding: 6px;
+
+  border: 1px solid rgba(255,255,255,.22);
+  border-radius: 18px;
+  background: rgba(35,20,36,.85);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  box-shadow: 0 8px 28px rgba(0,0,0,.25);
+
+  transition: transform .35s ease, opacity .35s ease;
+}
+
+.site-nav.nav-visible {
+  transform: translate(-50%, 0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.site-nav a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  padding: 10px 16px;
+  border-radius: 12px;
+  color: inherit;
+  font: 700 12px/1.2 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  white-space: nowrap;
+}
+
+.site-nav a:hover {
+  background: rgba(255,255,255,.13);
+}
+
+.site-nav a[aria-current="page"] {
+  background: rgba(255,255,255,.18);
+  color: #f6d99c;
+}
+
+@media(max-width:520px) {
+  .site-nav {
+    width: calc(100% - 24px);
+    box-sizing: border-box;
+  }
+
+  .site-nav a {
+    flex: 1;
+    padding: 10px 8px;
+  }
+}
 </style>
+
+<nav class="site-nav" aria-label="Navigasi utama">
+  <a href="https://iniprediksinyagacor.vercel.app/">Beranda</a>
+  <a href="https://iniprediksinyagacor.vercel.app/index-togel.html">Togel</a>
+  <a href="index-bola.html" aria-current="page">Bola</a>
+</nav>
+
+<script>
+(() => {
+  const nav = document.querySelector('.site-nav');
+  if (!nav) return;
+
+  function checkPageBottom() {
+    const scrollPosition =
+      window.scrollY + window.innerHeight;
+
+    const pageHeight =
+      document.documentElement.scrollHeight;
+
+    const reachedBottom =
+      scrollPosition >= pageHeight - 5;
+
+    nav.classList.toggle('nav-visible', reachedBottom);
+  }
+
+  window.addEventListener('scroll', checkPageBottom, {
+    passive: true
+  });
+
+  window.addEventListener('resize', checkPageBottom);
+
+  checkPageBottom();
+})();
+</script>
 
 <div class="wrap">
 <header class="top">
